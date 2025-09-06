@@ -1,0 +1,99 @@
+
+app:
+  timezone: Europe/London
+  lookahead_days: 365 # schedule bookings for this many days ahead
+  emails_enabled: true
+  add_debug_task: false
+
+
+users:
+  gymbox:
+    - id: liam
+      username: liammorris
+      password: "gAAAAABobm2snrsup7E-G7tJp7I1uNMq5RnTK9RzeWbtS416FV9xwjS7DEOnCC85DilaBV8wcxRNA2Fni5SCDnW8E77Tvjaizw=="
+      card_number: "gAAAAABobm3OZzkRJjbw96htn2MbvwEezNfp_ffQ_aTm4Pc4n3DSKX-MOyr-pPZ2S5o2GJOZ9tiwRcPorqiktut2wEKBpEcI5zOV4tRN0lwZ5Ovmj7ktO7g="
+      card_expiry: "gAAAAABobm3iGX388ciVYEKIIYdNXULpoNK9SRSMQL6W62-olYJEnIP581nr6O5Hq0uNtZ_cwECrdYRqtfX_hHNhLP-9zYJ8QQ=="
+      card_cvc: "gAAAAABobm3xlV_n-1OF6GcM3kcEijrUk6ojhSuJts9j40-VUdDqbw79z7wXzoPfcyTteszKU9mqkipx7LgpBlpljcEdsVcZQQ=="
+
+  better:
+    - id: liam
+      username: liammorris
+      password: "gAAAAABobm2snrsup7E-G7tJp7I1uNMq5RnTK9RzeWbtS416FV9xwjS7DEOnCC85DilaBV8wcxRNA2Fni5SCDnW8E77Tvjaizw=="
+      card_number: "gAAAAABobm3OZzkRJjbw96htn2MbvwEezNfp_ffQ_aTm4Pc4n3DSKX-MOyr-pPZ2S5o2GJOZ9tiwRcPorqiktut2wEKBpEcI5zOV4tRN0lwZ5Ovmj7ktO7g="
+      card_expiry: "gAAAAABobm3iGX388ciVYEKIIYdNXULpoNK9SRSMQL6W62-olYJEnIP581nr6O5Hq0uNtZ_cwECrdYRqtfX_hHNhLP-9zYJ8QQ=="
+      card_cvc: "gAAAAABobm3xlV_n-1OF6GcM3kcEijrUk6ojhSuJts9j40-VUdDqbw79z7wXzoPfcyTteszKU9mqkipx7LgpBlpljcEdsVcZQQ=="
+
+  clubspark:
+    - id: liam
+      email: omnibooker@liamjm.com
+      username: liammorris
+      password: "gAAAAABobm2snrsup7E-G7tJp7I1uNMq5RnTK9RzeWbtS416FV9xwjS7DEOnCC85DilaBV8wcxRNA2Fni5SCDnW8E77Tvjaizw=="
+      card_number: "gAAAAABobm3OZzkRJjbw96htn2MbvwEezNfp_ffQ_aTm4Pc4n3DSKX-MOyr-pPZ2S5o2GJOZ9tiwRcPorqiktut2wEKBpEcI5zOV4tRN0lwZ5Ovmj7ktO7g="
+      card_expiry: "gAAAAABobm3iGX388ciVYEKIIYdNXULpoNK9SRSMQL6W62-olYJEnIP581nr6O5Hq0uNtZ_cwECrdYRqtfX_hHNhLP-9zYJ8QQ=="
+      card_cvc: "gAAAAABobm3xlV_n-1OF6GcM3kcEijrUk6ojhSuJts9j40-VUdDqbw79z7wXzoPfcyTteszKU9mqkipx7LgpBlpljcEdsVcZQQ=="
+
+    - id: madi
+      email: madrobb1997@gmail.com
+      username: MadiRobb
+      password: "gAAAAABoiS61ZCQYR10L6feZmSZjR185Pq5S__eMaszDskWzR3iml5EEwPa2_XkEbn8kyms48dQQCjJNbmjmVDJzNWkYFLWe-w=="
+      card_number: "gAAAAABoiS9VXQq1Vfhk5b2mXdXgkw76FZ0n0lelXMAdbiTWPw6gqeDnMtwtf6qr1p7TknM8kIQ1tURlxRz4DTqJoFFhwtUDCsTk6Q3mwV_VybXyEu_H2iw="
+      card_expiry: "gAAAAABobm3iGX388ciVYEKIIYdNXULpoNK9SRSMQL6W62-olYJEnIP581nr6O5Hq0uNtZ_cwECrdYRqtfX_hHNhLP-9zYJ8QQ=="
+      card_cvc: "gAAAAABoiS88DJr_A96kwPcMgwJZxWIo7XzNy9llkurORKfjPfvdm1roemB9U2_-5STu1U2JHYEiT8hh5xNXlF3Lh9xjuVg8hw=="
+
+booking_slots:
+  # better:
+  # gymbox:
+  clubspark:
+    - user: liam
+      target_day: saturday
+      double_session: false
+      target_times: 
+        - "10:00"
+        - "11:00"
+        - "14:00"
+        - "15:00"
+      target_park: finsburypark
+      target_courts: [8,7,1,2,3,4,5,6]
+
+    - user: liam
+      target_day: sunday
+      double_session: false
+      target_times: 
+        - "10:00"
+        - "11:00"
+        - "14:00"
+        - "15:00"
+      target_park: finsburypark
+      target_courts: [8,7,1,2,3,4,5,6]
+
+    - user: liam
+      target_day: wednesday
+      double_session: true
+      target_times: 
+        - "19:00"
+        - "18:00"
+      target_park: clissoldparkhackney
+      target_courts: [7,6,5,4,3,2]
+
+    - user: liam
+      target_day: tuesday
+      double_session: true
+      target_times: 
+        - "19:00"
+        - "18:00"
+      target_park: clissoldparkhackney
+      target_courts: [7,6,5,4,3,2]
+
+# relative to 00:00 on the target day of bookings
+release_schedules:
+  clubspark:
+    - id: finsburypark
+      days: 7
+      hours: 0
+      minutes: 0
+    - id: clissoldparkhackney
+      days: 6
+      hours: 2
+      minutes: 0
+  # better:
+  # gymbox:
