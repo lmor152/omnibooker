@@ -80,6 +80,10 @@ class TokenManager:
         if self._refresh_access_token():
             return self.tokens.get("access_token")
 
+        # If refresh fails, try to fetch initial token
+        if self._fetch_initial_token():
+            return self.tokens.get("access_token")
+
         # No valid token available
         return None
 
